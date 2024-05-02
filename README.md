@@ -8,7 +8,7 @@
 </p>
 <br>
 
-# Hadoop MapReduce RS-Join and Replicated Join Demo
+# Page Rank Algorithm in Hadoop Map-Reduce 
 (Coded for Homework-2 Assignment)
 
 ## Author
@@ -56,32 +56,19 @@ All of the build & execution commands are organized in the Makefile.
 7) Standalone Hadoop:
 	- `make switch-standalone`		-- set standalone Hadoop environment (execute once)
 	- `make local`
-8)  **Not Configured for this App** 
-	Pseudo-Distributed Hadoop:
-	(https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-common/SingleCluster.html#Pseudo-Distributed_Operation)
-	- `make switch-pseudo`			-- set pseudo-clustered Hadoop environment (execute once)
-	- `make pseudo`					-- first execution
-	- `make pseudoq`				-- later executions since namenode and datanode already running 
+8)  **Pseudo-Distributed Hadoop Not Configured for this App** 
+	
 9) AWS EMR Hadoop: (you must configure the emr.* config parameters at top of Makefile)
 	(Before Exectution)
 	- `make make-bucket`			-- only before first execution
 	- `make upload-input-aws`		-- only before first execution
 	
-	### a - Reduce-side Join Commands(Use After Execution)
 	#### (aws.num.nodes, aws.instance.type)
-	- `make aws-rs`					-- check for successful execution with web interface for rs join app(aws.amazon.com)
+	- `make aws`					-- check for successful execution with web interface for rs join app(aws.amazon.com)
 
 	#### (Update aws.cluster.id)
 	- `download-output-aws-rs`		-- downloads rs join output after successful execution & termination
 	- `download-logs-aws-rs`		-- downloads rs join logs for execution
-
-	### b - Replicated Join Commands(Use After Execution)
-	#### (Update aws.num.nodes, aws.instance.type)
-	- `make aws-rep`				-- check for successful execution with web interface for rep join app(aws.amazon.com)
-
-	#### (Update aws.cluster.id)
-	- `download-output-aws-rep`		-- downloads rep join output after successful execution & termination
-	- `download-logs-aws-rep`		-- downloads rep join logs for execution
 
 ## Build Tested on
 - Windows 10 with WSL-2.0
