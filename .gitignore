@@ -1,0 +1,15 @@
+#input
+input/*
+
+#output
+##ignore crc files
+output/spark/100/Iteration0/*
+output/spark/100/Iteration10/*.crc
+
+
+#ide
+.idea*
+
+#other
+*.class
+*.log
